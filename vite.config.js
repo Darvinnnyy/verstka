@@ -26,7 +26,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(import.meta.dirname, 'index.html'),
-        services: resolve(import.meta.dirname, 'services.html'),
       },
     },
   },
