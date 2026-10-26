@@ -1,0 +1,34 @@
+@use 'variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-main;
+  background-color: $color-bg;
+  color: $color-text;
+  margin: 0;
+}
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-top: 40px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-primary;
+  color: #fff;
+  font-size: 24px;
+}

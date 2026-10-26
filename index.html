@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prac3</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="/src/assets/img/slide1.jpe"
+              alt="Персонаж с зелёными волосами"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+          </div>
+          <div class="swiper-slide">Слайд 2</div>
+          <div class="swiper-slide">Слайд 3</div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+
+      <!-- Вставка карточек по БЭМ -->
+      <div class="card">
+        <h3 class="card__title">Веб-разработка</h3>
+        <p class="card__text">Создание адаптивных сайтов на Vite и SCSS.</p>
+        <span class="card__price">от 15 000 ₽</span>
+        <button class="card__btn" type="button">Заказать</button>
+      </div>
+
+      <div class="card card--featured">
+        <h3 class="card__title">Комплексный дизайн</h3>
+        <p class="card__text">Разработка UI/UX прототипов и дизайн-систем.</p>
+        <span class="card__price">от 25 000 ₽</span>
+        <button class="card__btn" type="button">Популярный выбор</button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
