@@ -1,0 +1,83 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.tabs {
+  position: relative;
+
+  // Плавное затухание справа на мобильных/планшетах при скролле
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 24px;
+    background: linear-gradient(
+      270deg,
+      $color-bg-page 16.84%,
+      rgba(248, 248, 248, 0.0001) 100%
+    );
+    pointer-events: none;
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 $padding-mobile;
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include tablet {
+      padding: 0 $padding-tablet;
+    }
+
+    @include desktop {
+      flex-wrap: wrap;
+      row-gap: 8px;
+      padding: 0 $padding-desktop;
+      overflow-x: visible;
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    height: 40px;
+    padding: 8px 16px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    white-space: nowrap;
+    color: $color-text-secondary;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    transition:
+      border-color 0.2s ease,
+      background-color 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+      border-color: $color-border-tab;
+    }
+
+    &--state--active {
+      background-color: $color-bg-surface;
+      border-color: $color-border-tab;
+    }
+  }
+}

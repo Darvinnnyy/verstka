@@ -1,0 +1,71 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.header {
+  background-color: $color-bg-surface;
+  border-bottom: 1px solid $color-border-header;
+
+  @include desktop {
+    display: none;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 88px;
+    padding: 0 $padding-mobile;
+
+    @include tablet {
+      padding: 0 $padding-tablet;
+    }
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    @include tablet {
+      gap: 20px;
+    }
+  }
+
+  &__contacts {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+.divider {
+  display: block;
+  width: 2px;
+  height: 32px;
+  border-radius: 1px;
+  background-color: $color-divider;
+
+  &--visibility--tablet {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}

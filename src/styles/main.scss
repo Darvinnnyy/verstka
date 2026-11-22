@@ -1,4 +1,10 @@
-@use 'variables' as *;
-@use 'mixins' as *;
+@use 'variables';
+@use 'mixins';
 @use 'base';
-@use 'components/card';
+
+@use 'components/icon-button';
+@use 'components/header';
+@use 'components/page-title';
+@use 'components/tabs';
+@use 'components/article';
+@use 'components/services';

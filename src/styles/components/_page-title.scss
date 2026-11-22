@@ -1,0 +1,35 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.page-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding-left: $padding-mobile;
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  color: $color-text-primary;
+
+  @include tablet {
+    padding-left: $padding-tablet;
+  }
+
+  @include desktop {
+    padding-left: $padding-desktop;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 40px;
+    border-radius: 0 4px 4px 0;
+    background-color: $color-accent-mint;
+  }
+}
